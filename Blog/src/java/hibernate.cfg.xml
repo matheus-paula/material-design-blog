@@ -43,9 +43,9 @@ Contributor(s):
   <session-factory>
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-    <property name="hibernate.connection.url">jdbc:mysql://192.168.56.104:3306/blog?autoReconnect=true</property>
-    <property name="hibernate.connection.username">sysadmin</property>
-    <property name="hibernate.connection.password">root</property>
+    <property name="hibernate.connection.url">jdbc:mysql://<IP ADDRESS>:3306/blog?autoReconnect=true</property>
+    <property name="hibernate.connection.username">username</property>
+    <property name="hibernate.connection.password">password</property>
     <property name="hibernate.connection.pool_size">1</property>
     <property name="hibernate.show_sql">true</property>
     <property name="hibernate.current_session_context_class">thread</property>
