@@ -1,0 +1,351 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15/09/2018, 22:48:31
+    Author     : mathe
+*/
+
+.mostrarSideNav{
+    display:none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: none;
+    background: none;
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.cabecalhoEscondido{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left:0;
+    height: 52px;
+    background: #ca2900;
+    z-index: 999;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition: transform .3s, margin .3s, width .3s;
+    -moz-transition: transform .3s, margin .3s, width .3s;
+    -o-transition: transform .3s, margin .3s, width .3s;
+    -ms-transition: transform .3s, margin .3s, width .3s;
+    transition: transform .3s, margin .3s, width .3s;
+}
+
+.cabecalhoEscondido.mostrar{
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+}
+
+.cabecalhoEscondido h2{
+    color: #ffffff;
+    margin-left: 52px;
+}
+
+.cabecalhoPainel {
+    position: absolute;
+    width: 100%;
+    height: 260px;
+    background: #ca2900;
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    -ms-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    -o-box-shadow: 0 0 10px rgba(0,0,0,.3);
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    z-index: 99;
+}
+
+.areaUsuarioPainel{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    padding: 0;
+    width: 100%;
+    height: 200px;
+    display: block;
+    margin: 0;
+}
+
+.areaUsuarioPainel > div{
+    text-align: center;
+}
+
+.areaUsuarioPainel .fotoPerfil{
+    width: 40px;
+    height: 40px;
+    margin: 6px 0;
+    border-radius: 20px;
+}
+
+.areaUsuarioPainel .fotoPerfil img{
+    display: inline-block;
+    background: url('../graficos/semfoto.png');
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    margin: 4px;
+}
+
+/*LISTA DE POSTS*/
+.listaPostComentarios:after,
+.listaPostViews:after{
+    margin-left: 0.4em;
+    font: normal normal normal 18px/1 FontAwesome;
+    line-height: 18px;
+}
+
+.listaPostComentarios:after{
+    content: "\f0e6";
+}
+
+.listaPostViews:after{
+    content: "\f06e";
+}
+
+.listaPostOpcoes{
+    margin-top: 6px;
+}
+
+.tabelaPadrao a{
+    text-decoration: none;
+    color: #ca2900;
+    line-height: 36px;    
+}
+
+.tabelaPadrao a:hover{
+    text-decoration: none;
+    color: #f94314;
+}
+
+.rotuloRascunho{
+    font-style: italic;
+    color:#ca2900;
+}
+
+.rotuloResposta{
+    font-size: 12px;
+}
+
+.autorComentario{
+    min-width: 160px;
+    text-align: center !important;
+}
+
+/* LISTA USUARIOS */
+#listaUsuarios{
+    
+}
+
+#listaUsuarios tbody tr td:nth-child(1){
+    width: 120px;
+}
+
+#listaUsuarios .dropdownPadrao{
+    width: 135px;
+}
+
+#listaUsuarios .dropdownPadrao ul{
+    top: 0;
+}
+
+#navegacaoPorPaginas{
+    position: relative !important;
+}
+
+.avatarPerfil{
+    width: 86px;
+    height: 86px;
+    border-radius:100px;
+}
+
+#detalhesUsuarioFoto{
+    position: relative;
+    border-radius: 120px;
+    height: 120px;
+    width: 120px;
+}
+
+#detalhesUsuarioNome, 
+#detalhesUsuarioEmail{
+    color:#ffffff;
+    margin: 10px 0px 10px 0px;
+}
+
+.botaoDeslogarCabecalho{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 218px;
+    padding: 6px 0;
+}
+.botoesTopo{
+    width: 100%;
+    height: 60px;
+}
+
+.botoesTopo > div{
+    float:left;
+    width: 50%;
+}
+
+.botoesTopo:after{
+    content:"";
+    clear:both;
+}
+
+.containerConteudo{
+    padding: 0px 16px 16px 16px;
+    z-index: 999;
+    top: 60px;
+}
+/* Coluna esquerda */
+.colunaEsquerda {
+    width: 25%;
+}
+
+/* Coluna direita */
+.colunaDireita {
+    width: 75%; 
+}
+
+.colunaDireita > div{
+    min-height: 750px;
+}
+
+#dropdownPaginas{
+    min-width: 60px;
+}
+
+.dropdownPadraoLegenda{
+    text-transform: capitalize !important;
+}
+
+#listaTagsDropdown{
+    float: right;
+    border: none;
+    margin: 12px 0;
+    width: 154px;
+    z-index: 99;
+}
+
+.menuLateral{
+    position: fixed;
+    top: 0;
+    width: 0;
+    background: rgba(0,0,0,0.5);
+    left: 0;
+    height: 0;
+    z-index: 999;   
+}
+
+.menuLateral.mostrar{
+    width: 100%;
+    height: 100%;
+}
+
+.menuLateral.mostrar ul{
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+}
+
+.menuLateral .mostrarSideNav{
+    position: relative;
+    float: left;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.menuLateral ul{
+    width: 80vw !important;
+    height: 100% !important;
+    margin: 0 !important;
+    background: #ffffff;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+#menuPainel ul {
+    list-style-type: none;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding-left: 0px;
+    overflow: auto;
+    margin-top: 16px;
+    box-shadow: none;
+}
+
+#menuPainel ul li{
+    padding-left: 0
+}
+
+#menuPainel ul li:nth-child(1) {
+    background: none;
+    display:none;
+}
+
+.menuPadrao li.item a{
+    padding-left: 54px;
+}
+
+.menuLateral ul li:nth-child(1){
+    display:block !important;
+}
+
+#menuPainel ul li:nth-child(1) h2{
+    margin: 2px 0;
+}
+
+@media (max-width:800px) {
+    table.tabelaPadrao td {
+        display: inline-block !important;
+    }
+    .mostrarSideNav{
+        display: block;
+    }
+    .colunaDireita > div{
+        min-height: 200px !important;
+    }
+    .botaoDeslogarCabecalho a{
+        padding: 0 8px;
+    }
+    .botaoDeslogarCabecalho{
+        width: 180px;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .cabecalhoPainel{
+        height:120px;
+    }
+    .areaUsuarioPainel{
+        height: 64px;
+    }
+    .containerConteudo{
+        transform: translateY(10px);
+    }
+    #detalhesUsuarioFoto{
+        position:absolute;
+        height: 56px;
+        margin: 0;
+        width: 56px;
+    }
+    #detalhesUsuarioNome, 
+    #detalhesUsuarioEmail{
+        margin: 4px 0px 4px 74px;
+    }
+}

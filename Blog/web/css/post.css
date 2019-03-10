@@ -1,0 +1,178 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20/09/2018, 14:59:12
+    Author     : mathe
+*/
+
+.cartaoIndiceConteudo h3{
+    font-family: Georgia, "Times New Roman", helvetica, arial;
+    color: #7d7d7d;
+    font-style: italic;    
+}
+
+#descricaoAutor{
+    width: 100%;
+    padding: 10px;
+    border-top: 1px solid #eee;
+}
+
+#corpoPostagem img{
+    max-width: 100%;
+}
+
+#descricaoAutor > tbody > tr:nth-child(1) > td{
+    width: 92px;
+}
+
+#comentarios h3{
+    margin-bottom: 30px;
+}
+
+.listaComentarios,
+.respostasComentario{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.listaComentarios li{
+    display: flex;
+    width:100%;
+}
+
+.listaComentarios .cabecalhoComentarioAutor a{
+    color:#222;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.listaComentarios .cabecalhoComentarioAutor a:hover{
+    color:#ca2900;
+}
+
+.listaComentarios .cabecalhoComentarioAutor a.editor{
+    display: inline-block;
+    padding: 4px 5px;
+    background: #ca2900;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.listaComentarios .cabecalhoComentarioAutor span.dataComentario{
+    color: #aaa;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.validacaoCaptcha{
+    display: flex;
+}
+
+.validacaoCaptcha > div:nth-child(1){
+    display: flex;
+    padding: 16px 20px 16px 0;
+}
+
+.validacaoCaptcha > div:nth-child(2){
+    width: 80px;
+}
+
+.comentarioForm .comentarioContainer{
+    display: flex;
+}
+
+.comentarioForm .comentarioContainer > div {
+    float: left;
+}
+
+.comentarioForm .comentarioContainer > div:nth-child(1){
+        margin-right: 10px;
+}
+
+.comentarioForm .fotoPerfilComentarista{
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    margin-top: 50%;    
+}
+
+.mensagemErroComentario,
+.mensagemErroResposta{
+    color: #ec3000;
+    display: none;
+}
+
+.mostrarErro .mensagemErroComentario,
+.mostrarErro .mensagemErroResposta{
+    display:block;
+}
+
+.listaComentarios .cabecalhoComentarioAutor a.editor:after{
+    content: '\f00c';
+    font-family: "FontAwesome";
+    display: inline-block;
+    line-height: 10px;
+    width: 14px;
+    height: 12px;
+    margin-left: 5px;
+}
+
+.listaComentarios .acoesComentario{
+    height: 60px;
+    position: relative;
+}
+
+.listaComentarios .respostasComentario,
+.listaComentarios .respostasComentario li{
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.listaComentarios .respostasComentario li{
+    border-bottom: 1px solid #eee;
+    border-top: none;
+}
+
+.listaComentarios .respostasComentario li:last-child{
+    border-bottom: none;
+}
+
+.listaComentarios li .comentarioTexto{
+    margin-top: 10px;
+}
+
+.listaComentarios li .comentarioFoto{
+    margin-right: 20px;
+}
+
+.listaComentarios li .comentarioFoto,
+.listaComentarios li .comentarioFoto img{
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+}
+
+.respostasComentario li .comentarioFoto,
+.respostasComentario li .comentarioFoto img{
+    width: 24px;
+    height: 24px;
+    border-radius: 48px;
+}
+
+.listaComentarios .cabecalhoComentarioAutor{
+    height: 25px;
+}
+
+.listaComentarios .corpoComentario{
+    width: 100%;
+}
+
+.listaComentarios .corpoComentario:after{
+    content: "";
+    clear: both;
+}

@@ -1,0 +1,92 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 31/08/2018, 19:50:40
+    Author     : matheus
+*/
+
+#apresentacaoCadastro{
+    height: auto;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+#tabelaCadastro p{
+    margin: 0;
+}
+
+#tabelaCadastro{
+    width: 100%;
+    max-width: 600px;
+    min-height:520px;
+    margin: auto;
+}
+
+#tabelaCadastro > div.campoDeTexto{
+    margin: 30px 0;
+}
+
+#cadastroErros{
+    position: relative;
+}
+
+#cadastroErros div{
+    position: relative;
+}
+
+#conteudoPrincipal{
+    display:flex;
+    max-width:632px;
+    min-height:420px;
+    margin: auto;
+    margin-top:5%;
+}
+
+#conteudoPrincipal > div {
+    width: 300px;
+    padding:16px;
+}
+
+#conteudoPrincipal h2{
+    color: #333;
+    font-size: 17px;
+    margin: 23px 0;
+}
+
+#conteudoPrincipal > div:nth-child(2){
+    border-left:1px solid #eee;
+}
+
+#conteudoPrincipal td table{
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.campoDescricao{
+    color: #8c8a8a;
+    font-size: 12px;
+}
+
+
+@media (max-width: 566px) {
+    #conteudoPrincipal {
+        display: block;
+        height: auto;
+        margin: auto;    
+    }
+    
+    #conteudoPrincipal > div{
+        width: 100%;
+        margin: auto;
+    }
+    
+    #conteudoPrincipal > div:nth-child(2){
+        border-left: 0px !important;
+        border-top:1px solid #eee;
+    }
+}
+
+

@@ -1,0 +1,71 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 09/09/2018, 13:30:03
+    Author     : mathe
+*/
+
+#containerImagemPerfil{
+    position: relative;
+    width: 200px;
+    margin: auto;
+}
+
+#imagemPerfil{
+    overflow: hidden;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+
+#escolherFoto{
+    position: absolute;
+    cursor: pointer;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+}
+#cortarImagem{
+    display:none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+#cortarImagem.mostrar{
+    display:block;
+}
+
+#cortarImagem > div{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: calc(50% - 16px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#cortarImagemContainer > img{
+    position: relative;
+    border: 1px solid #eee;
+    left: 50%;
+    margin: 20px 0 0 0;
+    transform: translateX(-50%);
+    height:auto;
+    width:auto;
+}
+
+#cortarImagemContainer > div{
+    margin: auto;
+}
+
+#camposPerfil .campoDeTexto{
+    margin: 42px 0;
+}
