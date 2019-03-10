@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05/09/2018 19:48:08 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="blog" lazy="false" name="models.Usuarios" table="usuarios">
+    <id name="id" type="java.lang.Integer">
+      <column name="id"/>
+      <generator class="identity"/>
+    </id>
+    <property name="nomeUsuario" type="string">
+      <column name="nomeUsuario" not-null="true"/>
+    </property>
+    <property name="nome" type="string">
+      <column name="nome"/>
+    </property>
+    <property name="sobrenome" type="string">
+      <column name="sobrenome"/>
+    </property>
+    <property name="senha" type="string">
+      <column name="senha" not-null="true"/>
+    </property>
+    <property name="chave" type="string">
+      <column name="chave"/>
+    </property>
+    <property name="bio" type="string">
+      <column name="bio"/>
+    </property>
+    <property name="foto" type="string">
+      <column name="foto"/>
+    </property>
+    <property insert="false" name="dataCadastro" type="timestamp">
+      <column length="19" name="dataCadastro"/>
+    </property>
+    <property name="email" type="string">
+      <column name="email"/>
+    </property>
+    <property name="privilegios" type="char">
+      <column name="privilegios"/>
+    </property>
+    <set cascade="delete" fetch="select" inverse="true" lazy="false" name="listaDeComentarios" table="comentarios">
+      <key>
+        <column name="idAutor" not-null="true"/>
+      </key>
+      <one-to-many class="models.Comentarios"/>
+    </set>
+  </class>
+</hibernate-mapping>

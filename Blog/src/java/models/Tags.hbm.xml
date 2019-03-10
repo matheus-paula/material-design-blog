@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05/09/2018 19:48:08 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="blog" lazy="false" name="models.Tags" table="tags">
+    <id name="idTag" type="string">
+      <column length="30" name="idTag"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="nomeTag" type="string">
+      <column length="100" name="nomeTag" not-null="true"/>
+    </property>
+    <!-- inverse=true impede que a tag seja excluida ao inserir um novo post -->
+    <set fetch="select" inverse="true" lazy="false" mutable="false" name="postsDaTag" table="tagsposts">
+      <key>
+        <column length="30" name="idTag" not-null="true"/>
+      </key>
+      <many-to-many entity-name="models.Posts">
+        <column name="idPost" not-null="true"/>
+      </many-to-many>
+    </set>
+  </class>
+</hibernate-mapping>

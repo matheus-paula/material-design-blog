@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05/09/2018 19:48:08 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="blog" lazy="false" name="models.Posts" table="posts">
+    <id name="id" type="java.lang.Integer">
+      <column name="id"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="models.Usuarios" fetch="select" name="usuarios">
+      <column name="idAutor" not-null="true"/>
+    </many-to-one>
+    <property name="linkPermanente" type="string">
+      <column name="linkPermanente" not-null="true"/>
+    </property>
+    <property insert="false" name="dataCriacaoPost" type="timestamp">
+      <column length="19" name="dataCriacaoPost"/>
+    </property>
+    <property insert="false" name="dataModificacaoPost" type="timestamp">
+      <column length="19" name="dataModificacaoPost"/>
+    </property>
+    <property name="conteudoPost" type="string">
+      <column name="conteudoPost"/>
+    </property>
+    <property name="tituloPost" type="string">
+      <column name="tituloPost"/>
+    </property>
+    <property name="sumarioPost" type="string">
+      <column name="sumarioPost"/>
+    </property>
+    <property name="imagemMiniatura" type="string">
+      <column name="imagemMiniatura"/>
+    </property>
+    <property name="visualizacoes" type="int">
+      <column name="visualizacoes"/>
+    </property>
+    <property name="publicado" type="char">
+      <column name="publicado"/>
+    </property>
+    <set cascade="delete" fetch="select" inverse="true" lazy="false" name="listaDeComentarios" order-by="dataComentario desc" table="comentarios">
+      <key>
+        <column name="idPost" not-null="true"/>
+      </key>
+      <one-to-many class="models.Comentarios"/>
+    </set>
+    <set fetch="select" inverse="false" lazy="false" mutable="false" name="tagsDoPost" table="tagsposts">
+      <key>
+        <column name="idPost" not-null="true"/>
+      </key>
+      <many-to-many entity-name="models.Tags">
+        <column length="30" name="idTag" not-null="true"/>
+      </many-to-many>
+    </set>
+  </class>
+</hibernate-mapping>

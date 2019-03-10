@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05/09/2018 19:48:08 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="blog" name="models.Comentarios" table="comentarios">
+    <id name="id" type="java.lang.Integer">
+      <column name="id"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="models.Posts" fetch="select" name="posts">
+      <column name="idPost" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="models.Usuarios" fetch="select" name="usuarios">
+      <column name="idAutor" not-null="true"/>
+    </many-to-one>
+    <property name="comentarioPai" type="java.lang.Integer">
+      <column name="comentarioPai"/>
+    </property>
+    <property name="autorNome" type="string">
+      <column name="autorNome"/>
+    </property>
+    <property name="tipo" type="char">
+      <column name="tipo"/>
+    </property>
+    <property name="comentario" type="string">
+      <column name="comentario"/>
+    </property>
+    <property insert="false" name="dataComentario" type="timestamp">
+      <column length="19" name="dataComentario"/>
+    </property>
+  </class>
+</hibernate-mapping>
